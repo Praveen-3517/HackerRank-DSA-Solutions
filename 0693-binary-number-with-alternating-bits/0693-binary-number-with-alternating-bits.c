@@ -1,22 +1,15 @@
-// bool hasAlternatingBits(int n) {
-
-//   int count;
-//  while(n>0){
-//     if(n==1){
-//         int at= count++;{
-//             if(at==0){
-//                 return(true);
-//             }
-//             else {
-//                 return (false);
-//             }
-//         }
-
-//     }
-//  }   
 bool hasAlternatingBits(int n) {
-    long long x = n ^ (n >> 1);
-    return (x & (x + 1)) == 0;
+    int last_bit = -1;
+
+    while(n>0){
+        int current_bit = n%2;
+        if (current_bit==last_bit){
+            return false;
+        }
+        last_bit = current_bit;
+        n>>=1;
+    }
+    return true;
 }
 
 // Synced seamlessly with LeetHub Pro
