@@ -1,4 +1,5 @@
-int getSum(int a, int b) {
+
+    int getSum(int a, int b) {
     while (b != 0) {
         unsigned int carry = (unsigned int)(a & b) << 1;
         a = a ^ b;
@@ -6,6 +7,8 @@ int getSum(int a, int b) {
     }
     return a;
 }
+    
+
 
 // Synced seamlessly with LeetHub Pro
 // Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
